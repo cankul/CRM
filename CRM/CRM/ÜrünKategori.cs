@@ -22,8 +22,10 @@ namespace CRM
 
         private void ÜrünKategori_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'dbCRMDataSet6.TBLKATEGORILER' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLKATEGORILERTableAdapter1.Fill(this.dbCRMDataSet6.TBLKATEGORILER);
             // TODO: This line of code loads data into the 'dbCRMDataSet2.TBLKATEGORILER' table. You can move, or remove it, as needed.
-            this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            //this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
 
         }
 
@@ -34,7 +36,8 @@ namespace CRM
             komut.Parameters.AddWithValue("@KATEGORIAD", SqlDbType.NVarChar).Value = txtKategoriAd.Text;
             komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = Convert.ToInt32(txtUrunSayisi.Text);
             komut.ExecuteNonQuery();
-            this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            //this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            this.tBLKATEGORILERTableAdapter1.Fill(this.dbCRMDataSet6.TBLKATEGORILER);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace CRM
     {
         public SqlConnection sqlbaglanti()
         {
-            SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-7EGS3RS\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
+            SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-0ONFILC\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
             baglan.Open();
             return baglan;
         }

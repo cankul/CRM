@@ -22,8 +22,10 @@ namespace CRM
 
         private void Markalar_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'dbCRMDataSet4.TBLMARKALAR' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLMARKALARTableAdapter1.Fill(this.dbCRMDataSet4.TBLMARKALAR);
             // TODO: This line of code loads data into the 'dbCRMDataSet3.TBLMARKALAR' table. You can move, or remove it, as needed.
-            this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet3.TBLMARKALAR);
+            //this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet3.TBLMARKALAR);
 
         }
 
@@ -42,7 +44,8 @@ namespace CRM
             SqlCommand komut = new SqlCommand("Insert INTO TBLMARKALAR (MarkaAd) VALUES (@MARKAAD)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@MARKAAD", SqlDbType.NVarChar).Value = txtMarkaAd.Text;
             komut.ExecuteNonQuery();
-            this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet3.TBLMARKALAR);
+            //this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet3.TBLMARKALAR);
+            this.tBLMARKALARTableAdapter1.Fill(this.dbCRMDataSet4.TBLMARKALAR);
         }
     }
 }

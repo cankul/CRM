@@ -31,6 +31,11 @@ namespace CRM
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUSTERIADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUSTERISOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sEHIRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ıLETISIMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet = new CRM.dbCRMDataSet();
             this.tBLMUSTERILERTableAdapter = new CRM.dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter();
@@ -45,14 +50,21 @@ namespace CRM
             this.txtTel = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUSTERIADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUSTERISOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sEHIRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ıLETISIMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbCRMDataSet5 = new CRM.dbCRMDataSet5();
+            this.tBLMUSTERILERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERTableAdapter1 = new CRM.dbCRMDataSet5TableAdapters.TBLMUSTERILERTableAdapter();
+            this.dbCRMDataSet1 = new CRM.dbCRMDataSet();
+            this.dbCRMDataSet12 = new CRM.dbCRMDataSet12();
+            this.tBLMUSTERILERBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERTableAdapter2 = new CRM.dbCRMDataSet12TableAdapters.TBLMUSTERILERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,13 +79,55 @@ namespace CRM
             this.mUSTERISOYADDataGridViewTextBoxColumn,
             this.sEHIRDataGridViewTextBoxColumn,
             this.ıLETISIMNODataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tBLMUSTERILERBindingSource;
+            this.dataGridView1.DataSource = this.tBLMUSTERILERBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(757, 474);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Müşteri ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mUSTERIADDataGridViewTextBoxColumn
+            // 
+            this.mUSTERIADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERIAD";
+            this.mUSTERIADDataGridViewTextBoxColumn.HeaderText = "Ad";
+            this.mUSTERIADDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mUSTERIADDataGridViewTextBoxColumn.Name = "mUSTERIADDataGridViewTextBoxColumn";
+            this.mUSTERIADDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mUSTERISOYADDataGridViewTextBoxColumn
+            // 
+            this.mUSTERISOYADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERISOYAD";
+            this.mUSTERISOYADDataGridViewTextBoxColumn.HeaderText = "Soyad";
+            this.mUSTERISOYADDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mUSTERISOYADDataGridViewTextBoxColumn.Name = "mUSTERISOYADDataGridViewTextBoxColumn";
+            this.mUSTERISOYADDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sEHIRDataGridViewTextBoxColumn
+            // 
+            this.sEHIRDataGridViewTextBoxColumn.DataPropertyName = "SEHIR";
+            this.sEHIRDataGridViewTextBoxColumn.HeaderText = "Şehir";
+            this.sEHIRDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sEHIRDataGridViewTextBoxColumn.Name = "sEHIRDataGridViewTextBoxColumn";
+            this.sEHIRDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ıLETISIMNODataGridViewTextBoxColumn
+            // 
+            this.ıLETISIMNODataGridViewTextBoxColumn.DataPropertyName = "ILETISIMNO";
+            this.ıLETISIMNODataGridViewTextBoxColumn.HeaderText = "Telefon Numarası";
+            this.ıLETISIMNODataGridViewTextBoxColumn.MaxInputLength = 11;
+            this.ıLETISIMNODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ıLETISIMNODataGridViewTextBoxColumn.Name = "ıLETISIMNODataGridViewTextBoxColumn";
+            this.ıLETISIMNODataGridViewTextBoxColumn.Width = 125;
             // 
             // tBLMUSTERILERBindingSource
             // 
@@ -194,46 +248,38 @@ namespace CRM
             this.button3.Text = "Güncelle";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // dbCRMDataSet5
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Müşteri ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbCRMDataSet5.DataSetName = "dbCRMDataSet5";
+            this.dbCRMDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mUSTERIADDataGridViewTextBoxColumn
+            // tBLMUSTERILERBindingSource1
             // 
-            this.mUSTERIADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERIAD";
-            this.mUSTERIADDataGridViewTextBoxColumn.HeaderText = "Ad";
-            this.mUSTERIADDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mUSTERIADDataGridViewTextBoxColumn.Name = "mUSTERIADDataGridViewTextBoxColumn";
-            this.mUSTERIADDataGridViewTextBoxColumn.Width = 125;
+            this.tBLMUSTERILERBindingSource1.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource1.DataSource = this.dbCRMDataSet5;
             // 
-            // mUSTERISOYADDataGridViewTextBoxColumn
+            // tBLMUSTERILERTableAdapter1
             // 
-            this.mUSTERISOYADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERISOYAD";
-            this.mUSTERISOYADDataGridViewTextBoxColumn.HeaderText = "Soyad";
-            this.mUSTERISOYADDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mUSTERISOYADDataGridViewTextBoxColumn.Name = "mUSTERISOYADDataGridViewTextBoxColumn";
-            this.mUSTERISOYADDataGridViewTextBoxColumn.Width = 125;
+            this.tBLMUSTERILERTableAdapter1.ClearBeforeFill = true;
             // 
-            // sEHIRDataGridViewTextBoxColumn
+            // dbCRMDataSet1
             // 
-            this.sEHIRDataGridViewTextBoxColumn.DataPropertyName = "SEHIR";
-            this.sEHIRDataGridViewTextBoxColumn.HeaderText = "Şehir";
-            this.sEHIRDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sEHIRDataGridViewTextBoxColumn.Name = "sEHIRDataGridViewTextBoxColumn";
-            this.sEHIRDataGridViewTextBoxColumn.Width = 125;
+            this.dbCRMDataSet1.DataSetName = "dbCRMDataSet";
+            this.dbCRMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ıLETISIMNODataGridViewTextBoxColumn
+            // dbCRMDataSet12
             // 
-            this.ıLETISIMNODataGridViewTextBoxColumn.DataPropertyName = "ILETISIMNO";
-            this.ıLETISIMNODataGridViewTextBoxColumn.HeaderText = "Telefon Numarası";
-            this.ıLETISIMNODataGridViewTextBoxColumn.MaxInputLength = 11;
-            this.ıLETISIMNODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ıLETISIMNODataGridViewTextBoxColumn.Name = "ıLETISIMNODataGridViewTextBoxColumn";
-            this.ıLETISIMNODataGridViewTextBoxColumn.Width = 125;
+            this.dbCRMDataSet12.DataSetName = "dbCRMDataSet12";
+            this.dbCRMDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLMUSTERILERBindingSource2
+            // 
+            this.tBLMUSTERILERBindingSource2.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource2.DataSource = this.dbCRMDataSet12;
+            // 
+            // tBLMUSTERILERTableAdapter2
+            // 
+            this.tBLMUSTERILERTableAdapter2.ClearBeforeFill = true;
             // 
             // Müşteriler
             // 
@@ -261,6 +307,11 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +339,12 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn mUSTERISOYADDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sEHIRDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ıLETISIMNODataGridViewTextBoxColumn;
+        private dbCRMDataSet5 dbCRMDataSet5;
+        private System.Windows.Forms.BindingSource tBLMUSTERILERBindingSource1;
+        private dbCRMDataSet5TableAdapters.TBLMUSTERILERTableAdapter tBLMUSTERILERTableAdapter1;
+        private dbCRMDataSet dbCRMDataSet1;
+        private dbCRMDataSet12 dbCRMDataSet12;
+        private System.Windows.Forms.BindingSource tBLMUSTERILERBindingSource2;
+        private dbCRMDataSet12TableAdapters.TBLMUSTERILERTableAdapter tBLMUSTERILERTableAdapter2;
     }
 }

@@ -31,21 +31,26 @@ namespace CRM
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbCRMDataSet2 = new CRM.dbCRMDataSet2();
-            this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLKATEGORILERTableAdapter = new CRM.dbCRMDataSet2TableAdapters.TBLKATEGORILERTableAdapter();
             this.kategoriIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kategoriAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunSayisiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCRMDataSet2 = new CRM.dbCRMDataSet2();
+            this.tBLKATEGORILERTableAdapter = new CRM.dbCRMDataSet2TableAdapters.TBLKATEGORILERTableAdapter();
             this.lblKategoriAd = new System.Windows.Forms.Label();
             this.lblUrunSayisi = new System.Windows.Forms.Label();
             this.txtKategoriAd = new System.Windows.Forms.TextBox();
             this.txtUrunSayisi = new System.Windows.Forms.TextBox();
             this.btnKategoriEkle = new System.Windows.Forms.Button();
             this.btnKategoriSil = new System.Windows.Forms.Button();
+            this.dbCRMDataSet6 = new CRM.dbCRMDataSet6();
+            this.tBLKATEGORILERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLKATEGORILERTableAdapter1 = new CRM.dbCRMDataSet6TableAdapters.TBLKATEGORILERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,27 +62,13 @@ namespace CRM
             this.kategoriIDDataGridViewTextBoxColumn,
             this.kategoriAdDataGridViewTextBoxColumn,
             this.urunSayisiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tBLKATEGORILERBindingSource;
+            this.dataGridView1.DataSource = this.tBLKATEGORILERBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 126);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(636, 380);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dbCRMDataSet2
-            // 
-            this.dbCRMDataSet2.DataSetName = "dbCRMDataSet2";
-            this.dbCRMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLKATEGORILERBindingSource
-            // 
-            this.tBLKATEGORILERBindingSource.DataMember = "TBLKATEGORILER";
-            this.tBLKATEGORILERBindingSource.DataSource = this.dbCRMDataSet2;
-            // 
-            // tBLKATEGORILERTableAdapter
-            // 
-            this.tBLKATEGORILERTableAdapter.ClearBeforeFill = true;
             // 
             // kategoriIDDataGridViewTextBoxColumn
             // 
@@ -103,6 +94,20 @@ namespace CRM
             this.urunSayisiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.urunSayisiDataGridViewTextBoxColumn.Name = "urunSayisiDataGridViewTextBoxColumn";
             this.urunSayisiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tBLKATEGORILERBindingSource
+            // 
+            this.tBLKATEGORILERBindingSource.DataMember = "TBLKATEGORILER";
+            this.tBLKATEGORILERBindingSource.DataSource = this.dbCRMDataSet2;
+            // 
+            // dbCRMDataSet2
+            // 
+            this.dbCRMDataSet2.DataSetName = "dbCRMDataSet2";
+            this.dbCRMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLKATEGORILERTableAdapter
+            // 
+            this.tBLKATEGORILERTableAdapter.ClearBeforeFill = true;
             // 
             // lblKategoriAd
             // 
@@ -161,6 +166,20 @@ namespace CRM
             this.btnKategoriSil.Text = "Sil";
             this.btnKategoriSil.UseVisualStyleBackColor = true;
             // 
+            // dbCRMDataSet6
+            // 
+            this.dbCRMDataSet6.DataSetName = "dbCRMDataSet6";
+            this.dbCRMDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLKATEGORILERBindingSource1
+            // 
+            this.tBLKATEGORILERBindingSource1.DataMember = "TBLKATEGORILER";
+            this.tBLKATEGORILERBindingSource1.DataSource = this.dbCRMDataSet6;
+            // 
+            // tBLKATEGORILERTableAdapter1
+            // 
+            this.tBLKATEGORILERTableAdapter1.ClearBeforeFill = true;
+            // 
             // ÜrünKategori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,8 +197,10 @@ namespace CRM
             this.Text = "Ürün Kategori";
             this.Load += new System.EventHandler(this.ÜrünKategori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +221,8 @@ namespace CRM
         private System.Windows.Forms.TextBox txtUrunSayisi;
         private System.Windows.Forms.Button btnKategoriEkle;
         private System.Windows.Forms.Button btnKategoriSil;
+        private dbCRMDataSet6 dbCRMDataSet6;
+        private System.Windows.Forms.BindingSource tBLKATEGORILERBindingSource1;
+        private dbCRMDataSet6TableAdapters.TBLKATEGORILERTableAdapter tBLKATEGORILERTableAdapter1;
     }
 }

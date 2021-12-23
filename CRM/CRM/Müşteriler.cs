@@ -22,8 +22,12 @@ namespace CRM
 
         private void Müşteriler_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'dbCRMDataSet12.TBLMUSTERILER' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLMUSTERILERTableAdapter2.Fill(this.dbCRMDataSet12.TBLMUSTERILER);
+            // TODO: Bu kod satırı 'dbCRMDataSet5.TBLMUSTERILER' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tBLMUSTERILERTableAdapter1.Fill(this.dbCRMDataSet5.TBLMUSTERILER);
             // TODO: This line of code loads data into the 'dbCRMDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
-            this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
+            //this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
 
         }
 
@@ -35,7 +39,8 @@ namespace CRM
             komut.Parameters.AddWithValue("@SEHIR", SqlDbType.NVarChar).Value = txtSehir.Text;
             komut.Parameters.AddWithValue("@ILETISIMNO", SqlDbType.NVarChar).Value = txtTel.Text;
             komut.ExecuteNonQuery();
-            this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
+            //this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
+            this.tBLMUSTERILERTableAdapter1.Fill(this.dbCRMDataSet5.TBLMUSTERILER);
         }
 
         private void label4_Click(object sender, EventArgs e)
